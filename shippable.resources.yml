@@ -1,0 +1,23 @@
+resources:
+  - name: sample-script
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: chetantarale/sample-script
+      branch: master
+
+  - name: runImage
+    type: image
+    integration: dockerhub
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: latest
+
+  # - name: sample-script-dup
+  #   type: gitRepo
+  #   integration: github
+  #   pointer:
+  #     sourceName: chetantarale/sample-script
+  #     branch: master
